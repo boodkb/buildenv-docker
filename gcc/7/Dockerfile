@@ -1,6 +1,7 @@
 FROM boodkb/buildenv-base:latest
 
-RUN apt-get install -y \
+RUN apt-get update \
+    && apt-get install -y \
         gcc-7 g++-7
 
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 999 \
